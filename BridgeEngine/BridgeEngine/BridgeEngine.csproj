@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE89623C-E8C7-4241-B3A3-ACDB98AC5054}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BridgeEngine</RootNamespace>
+    <AssemblyName>BridgeEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asset\AssetManager.cs" />
+    <Compile Include="BridgeEngine.cs" />
+    <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Cameras\CameraManager.cs" />
+    <Compile Include="Cameras\MainCamera.cs" />
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Entity.cs" />
+    <Compile Include="Characters\Parts\Body.cs" />
+    <Compile Include="Characters\Parts\Ears.cs" />
+    <Compile Include="Characters\Parts\Eyes.cs" />
+    <Compile Include="Characters\Parts\Gender.cs" />
+    <Compile Include="Characters\Parts\Nose.cs" />
+    <Compile Include="Display\DisplayManager.cs" />
+    <Compile Include="Helpers\IntHelper.cs" />
+    <Compile Include="Helpers\SpriteBatchHelper.cs" />
+    <Compile Include="Input\InputManager.cs" />
+    <Compile Include="Maps\Tiles\AnimatedTile.cs" />
+    <Compile Include="Maps\Layer.cs" />
+    <Compile Include="Maps\Map.cs" />
+    <Compile Include="Maps\MapManager.cs" />
+    <Compile Include="Maps\Tiles\StandardTile.cs" />
+    <Compile Include="Maps\Tile.cs" />
+    <Compile Include="Maps\Tiles\TreeTile.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Network\Connection.cs" />
+    <Compile Include="Network\ConnectionManager.cs" />
+    <Compile Include="Network\SendPacket.cs" />
+    <Compile Include="Network\ReceivedPacket.cs" />
+    <Compile Include="Scene\Scene.cs" />
+    <Compile Include="Scene\SceneManager.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Frame.cs" />
+    <Compile Include="UI\TextBox.cs" />
+    <Compile Include="UI\UIComponent.cs" />
+    <Compile Include="UI\UIManager.cs" />
+    <Compile Include="UI\Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
